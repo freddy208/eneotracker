@@ -328,7 +328,7 @@ function App() {
               }`}
             >
               {!canVote(selectedQuartier) && selectedQuartier && <Lock size={14} />}
-              🛑 COUPÉ
+              🛑 COUPURE
             </button>
             
             <button 
@@ -349,7 +349,7 @@ function App() {
           {!canVote(selectedQuartier) && selectedQuartier && (
             <div className="bg-orange-50 border border-orange-200 text-orange-700 text-[10px] font-bold text-center py-2 mt-3 rounded-full flex items-center justify-center gap-2 animate-pulse">
                <Lock size={12} /> 
-               Vote bloqué pour {Math.ceil((30 * 60 * 1000 - (Date.now() - userVotes[selectedQuartier])) / 60000)} min
+               Vote bloqué pour {Math.ceil((10 * 60 * 1000 - (Date.now() - userVotes[selectedQuartier])) / 60000)} min
             </div>
           )}
         </section>
