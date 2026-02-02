@@ -1,0 +1,32 @@
+
+@import "tailwindcss";
+
+/* 1. Tes styles de base doivent venir APRES l'import tailwind */
+#map { 
+  height: 400px; 
+  width: 100%; 
+}
+
+.leaflet-container {
+  height: 500px;
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* 2. Animation pour les quartiers coupés */
+.pulse-red {
+  animation: pulse-animation 2s infinite;
+  border-radius: 50%;
+}
+
+@keyframes pulse-animation {
+  0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(239, 68, 68, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
+
+/* 3. Carte plus douce */
+.leaflet-tile {
+  filter: grayscale(0.2) contrast(1.1);
+}
+
